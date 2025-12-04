@@ -44,7 +44,11 @@ header {
   align-items: center;
   margin-left: 32px;
   margin-right: 32px;
-  height: 16vh;
+  height: 12vh;
+  width: auto;
+  top: 0px;
+  position: sticky;
+  background-color: var(--bg);
 }
 
 /* lokation design */
@@ -55,10 +59,9 @@ header {
   background-color: var(--bg);
   color: var(--text);
   border: var(--bg);
-  font-size: x-large;
+  font-size: large;
   font-family: "Sansita", sans-serif;
-  font-weight: 800;
-  font-style: italic;
+  font-style: bold;
   outline: 2px solid var(--bg-card);
   outline-offset: 8px;
   border-radius: var(--radius);
@@ -191,12 +194,12 @@ main {
 }
 
 /* dialog til spil */
-dialog#game-dialog {
+#game-dialog {
   border: none;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 0;
-  max-width: min(95vw, 1000px);
+  max-width: min(80vw, 1000px);
   max-height: 90vh;
   background: var(--bg-card);
   color: var(--text);
@@ -250,16 +253,14 @@ dialog#game-dialog {
   #dialog-content {
     grid-template-columns: 1fr;
     padding: 1.5rem;
-    gap: 1.5rem;
     text-align: start;
     font-family: inherit;
   }
 }
 
 #dialog-content img.game-cover {
-  width: 63vh;
-  height: 50vh;
-  max-height: 500px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -276,13 +277,10 @@ dialog#game-dialog {
   font-size: clamp(1.5rem, 4vw, 2.25rem);
   font-weight: 700;
   color: var(--text);
-  line-height: 1.2;
-  margin: 0 0 1rem 0;
 }
 
 #dialog-content p {
   color: var(--text-light);
-  line-height: 1.6;
   margin: 0 0 1rem 0;
 }
 
@@ -294,7 +292,6 @@ dialog#game-dialog {
 .game-description {
   color: var(--text) !important;
   font-size: 1.1rem !important;
-  line-height: 4 !important;
   margin-top: 1rem !important;
   border-radius: var(--radius);
   font-weight: bold;
@@ -316,7 +313,7 @@ dialog#game-dialog {
 }
 
 .logo {
-  width: 100px;
+  width: 80px;
   height: auto;
 }
 
