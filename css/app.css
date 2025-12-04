@@ -167,6 +167,13 @@ main {
 .card-info {
   padding-left: 1rem;
   padding-right: 1rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.8rem;
+  svg {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+  }
 }
 
 .atributterCard {
