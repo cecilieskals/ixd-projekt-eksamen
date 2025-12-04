@@ -3,11 +3,8 @@
 
 /* Farver */
 :root {
-  --primary: #264c59;
-  --secondary: #acc6c9;
-  --primary-light: #42535c;
-  --secondary-light: #3c4043;
-
+  --bg-img: #42535c;
+  
   /* Tekst */
   --text: #f1f3f4;
   --text-light: #dadce0;
@@ -36,12 +33,7 @@ body {
     sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background: linear-gradient(
-    135deg,
-    var(--bg) 0%,
-    #1a1a1a 50%,
-    var(--primary-light) 100%
-  );
+  background: var(--bg);
   color: var(--text);
   min-height: 100vh;
 }
@@ -187,12 +179,7 @@ main {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  background: linear-gradient(
-    135deg,
-    var(--secondary-light),
-    var(--primary-light)
-  );
-  transition: var(--transition);
+  background: var(--bg-img);
 }
 
 /* Mobile først - 2 kolonner */
@@ -309,9 +296,8 @@ dialog#game-dialog {
   font-size: 1.1rem !important;
   line-height: 4 !important;
   margin-top: 1rem !important;
-  background: var(--secondary-light);
   border-radius: var(--radius);
-  font-style: italic;
+  font-weight: bold;
 }
 
 .game-rules {
@@ -319,18 +305,27 @@ dialog#game-dialog {
   font-size: 1rem !important;
   line-height: 1.7 !important;
   margin-top: 1px !important;
-  background: var(--secondary-light);
   border-radius: var(--radius);
 }
 
 /* outline til navigering med tastatur */
 .game-card:focus-visible,
 #close-dialog:focus-visible {
-  outline: 3px solid var(--secondary);
+  outline: 3px solid var(--text);
   outline-offset: 2px;
 }
 
 .logo {
   width: 100px;
   height: auto;
+}
+
+/*footer*/
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--bg-card);
+  color: var(--text-light);
+  margin-top: 2rem;
+  border-top: 1px solid var(--text)
 }
