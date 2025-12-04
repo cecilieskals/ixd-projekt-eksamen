@@ -51,6 +51,10 @@ header {
   background-color: var(--bg);
 }
 
+.icons{
+  cursor: pointer;
+}
+
 /* lokation design */
 #lokation {
   display: flex;
@@ -65,6 +69,7 @@ header {
   outline: 2px solid var(--bg-card);
   outline-offset: 8px;
   border-radius: var(--radius);
+  cursor: pointer;
 }
 
 /* layout */
@@ -76,21 +81,6 @@ main {
 
 #valgte-filtre {
   height: fit-content;
-}
-
-#alle-filter {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  width: fit-content;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-bottom: 4px;
-  padding-top: 4px;
-  border-radius: var(--radius);
-  background: var(--dark-red);
-  box-shadow: var(--shadow);
-  margin-left: 16px;
 }
 
 #filter-bar {
@@ -133,6 +123,7 @@ main {
   background: var(--bg-card);
   box-shadow: var(--shadow);
   margin-right: 8px;
+  cursor: pointer;
 }
 
 #sort-select {
@@ -145,6 +136,7 @@ main {
   border-radius: var(--radius);
   background: var(--bg-card);
   box-shadow: var(--shadow);
+  cursor: pointer;
 }
 
 .icon-button{
@@ -152,9 +144,14 @@ main {
   border: none;
   padding: 0;
   margin: 0;
-  cursor: pointer;
   display: inline-flex;
   align-items: center;
+  cursor: pointer;
+}
+
+.icon-button svg{
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 .game-card {
