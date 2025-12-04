@@ -342,3 +342,8 @@ dialog#game-dialog::backdrop {
   outline: 3px solid var(--secondary);
   outline-offset: 2px;
 }
+
+.logo {
+  width: 100px;
+  height: auto;
+}
