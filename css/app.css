@@ -1,40 +1,30 @@
 /* Import af sansita skrifttype fra Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap");
 
-/* =====================
-   DARK MODE CSS VARIABLES
-   ===================== */
+/* Farver */
 :root {
-  /* Colors */
   --primary: #264c59;
   --secondary: #acc6c9;
   --primary-light: #42535c;
   --secondary-light: #3c4043;
 
-  /* Text - Dark Mode Colors */
+  /* Tekst */
   --text: #f1f3f4;
   --text-light: #dadce0;
 
-  /* Backgrounds - Dark Mode */
+  /* Baggrund */
   --bg: #202124;
   --bg-card: #3c4043;
-  --bg-red: #650306;
+  --dark-red: #650306;
+  --red: #ea4335;
 
-  /* Semantic */
-  --success: #34a853;
-  --warning: #fbc02d;
-  --error: #ea4335;
-
-  /* Effects */
+  /* Effekter */
   --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4);
   --radius: 00.5rem;
   --transition: 250ms ease;
 }
 
-/* =====================
-   GLOBAL STYLES
-   ===================== */
+/* Overordnet design */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -65,6 +55,7 @@ header {
   height: 16vh;
 }
 
+/* lokation design */
 #lokation {
   display: flex;
   align-items: center;
@@ -81,9 +72,7 @@ header {
   border-radius: var(--radius);
 }
 
-/* =====================
-   LAYOUT (main container)
-   ===================== */
+/* layout */
 main {
   max-width: min(1400px, 95vw);
   margin: 0 auto;
@@ -104,7 +93,7 @@ main {
   padding-bottom: 4px;
   padding-top: 4px;
   border-radius: var(--radius);
-  background: var(--bg-red);
+  background: var(--dark-red);
   box-shadow: var(--shadow);
   margin-left: 16px;
 }
@@ -183,12 +172,12 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.card2-info {
+.card-info {
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.atributterCard2 {
+.atributterCard {
   display: flex;
   justify-content: space-between;
   align-items: last baseline;
@@ -214,13 +203,11 @@ main {
   padding: 1rem;
 }
 
-/* =====================
-   MOVIE DIALOG
-   ===================== */
+/* dialog til spil */
 dialog#game-dialog {
   border: none;
   border-radius: var(--radius);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow);
   padding: 0;
   max-width: min(95vw, 1000px);
   max-height: 90vh;
@@ -231,7 +218,7 @@ dialog#game-dialog {
   margin: auto;
 }
 
-dialog#game-dialog::backdrop {
+#game-dialog::backdrop {
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(8px);
 }
@@ -240,7 +227,7 @@ dialog#game-dialog::backdrop {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: var(--error);
+  background: var(--red);
   color: var(--text-light);
   border: none;
   border-radius: 50%;
@@ -336,7 +323,7 @@ dialog#game-dialog::backdrop {
   border-radius: var(--radius);
 }
 
-/* Focus styles for keyboard navigation */
+/* outline til navigering med tastatur */
 .game-card:focus-visible,
 #close-dialog:focus-visible {
   outline: 3px solid var(--secondary);
