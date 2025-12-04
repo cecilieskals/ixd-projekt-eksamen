@@ -1,19 +1,17 @@
-"use strict"; // Aktiverer strict mode - hjælper med at fange fejl
+"use strict";
 
 // Start app når DOM er loaded (hele HTML siden er færdig)
 document.addEventListener("DOMContentLoaded", initApp);
 
 // ===== GLOBALE VARIABLER =====
-let allGames = []; // Hvorfor har vi brug for den her variabel?
-// Hvad kaldes den i Movie App?
+let allGames = []; 
 
 // ===== INITIALISERING =====
 function initApp() {
   console.log("initApp: app.js is running 🎉");
   getGames();
-  // Start app - initApp kaldes når DOMen er loaded // HTML siden er klar
-  // Hvad skal der så ske?
-  // Hent data? Sæt event listeners?
+
+  // initApp kaldes når DOMen er loaded // HTML siden er klar
   const genreSelect = document.querySelector("#genre-select");
   if (genreSelect) genreSelect.addEventListener("change", filterGames);
 
