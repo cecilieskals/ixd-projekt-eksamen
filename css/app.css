@@ -164,6 +164,7 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+
 .card-info {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -301,6 +302,16 @@ main {
   font-weight: bold;
 }
 
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--bg-card);
+  color: var(--text-light);
+  margin-top: 2rem;
+  border-top: 1px solid var(--text);
+}
+
+
 .game-rules {
   color: var(--text) !important;
   font-size: 1rem !important;
@@ -319,14 +330,4 @@ main {
 .logo {
   width: 80px;
   height: auto;
-}
-
-/*footer*/
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: var(--bg-card);
-  color: var(--text-light);
-  margin-top: 2rem;
-  border-top: 1px solid var(--text)
 }
