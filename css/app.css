@@ -42,25 +42,23 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 16px;
+  margin-left: 16px;
+  margin-right: 16px;
   height: 12vh;
   top: 0px;
   position: sticky;
   background-color: var(--bg);
 }
 
-.icons{
-  cursor: pointer;
-}
-
 /* lokation design */
 #lokation {
+  align-items: center;
   background-color: var(--bg);
   color: var(--text);
   border: var(--bg);
   font-size: medium;
   font-family: "Sansita", sans-serif;
-  font-style: bold;
+  font-weight: bold;
   outline: 2px solid var(--bg-card);
   outline-offset: 8px;
   border-radius: var(--radius);
@@ -80,10 +78,6 @@ main {
   padding: 16px;
 }
 
-#valgte-filtre {
-  height: fit-content;
-}
-
 #filter-bar {
   display: flex;
   gap: 1rem;
@@ -92,6 +86,7 @@ main {
 
 }
 
+/* søgefelt design */
 #search-input {
   background: var(--text);
   border: none;
@@ -102,6 +97,18 @@ main {
   width: 100%
 }
 
+/* ikoner design */
+.icon-button{
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* filter ikoner design */
 #filter-icons {
  display: flex;
  justify-content: space-evenly;
@@ -128,35 +135,12 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+/* sortering design */
 #sort-section {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
-
-
-#sort-selection-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-
-#genre-select {
-  color: var(--text);
-  flex: 2;
-  min-width: 150px;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-bottom: 4px;
-  padding-top: 4px;
-  border-radius: var(--radius);
-  background: var(--bg-card);
-  box-shadow: var(--shadow);
-  margin-right: 8px;
-  cursor: pointer;
-  position: relative;
-}
-
 #sort-select {
   color: var(--text);
   flex: 1;
@@ -171,21 +155,23 @@ main {
   cursor: pointer;
 }
 
-.icon-button{
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: inline-flex;
-  align-items: center;
+/* genre i filterbar design */
+#genre-select {
+  color: var(--text);
+  flex: 2;
+  min-width: 150px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  box-shadow: var(--shadow);
+  margin-right: 8px;
   cursor: pointer;
 }
 
-.icon-button svg{
-  cursor: pointer;
-  pointer-events: auto;
-}
-
+/* card design */
 .game-card {
   background: var(--bg-card);
   border-radius: var(--radius);
@@ -195,7 +181,6 @@ main {
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
-
 
 .card-info {
   padding-left: 1rem;
@@ -222,7 +207,7 @@ main {
   background: var(--bg-img);
 }
 
-/* Mobile først - 2 kolonner */
+/* Mobil - 2 kolonner */
 #game-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -261,13 +246,20 @@ main {
 }
 
 /* dialog til filter */
-#filter-dialog 
+#filter-dialog {
+  border: none;
+  border-radius: var(--radius);
+  padding: 1rem;
+  max-width: min(80vw, 400px);
+  background: var(--bg-card);
+  color: var(--text);
+  overflow: hidden;
+}
 
 /* dialog til spil */
 #game-dialog {
   border: none;
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
   padding: 0;
   max-width: min(80vw, 1000px);
   max-height: 90vh;
@@ -316,17 +308,8 @@ main {
   align-items: start;
   overflow-y: auto;
   max-height: 90vh;
-  max-width: 70vh;
 }
 
-@media (max-width: 768px) {
-  #dialog-content {
-    grid-template-columns: 1fr;
-    padding: 1.5rem;
-    text-align: start;
-    font-family: inherit;
-  }
-}
 
 #dialog-content img.game-cover {
   width: 100%;
@@ -334,13 +317,6 @@ main {
   object-fit: cover;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-}
-
-@media (max-width: 768px) {
-  #dialog-content img.movie-poster {
-    max-width: 300px;
-    margin: 0 auto;
-  }
 }
 
 #dialog-content h2 {
@@ -382,6 +358,7 @@ main {
   outline-offset: 2px;
 }
 
+/* logo i header */
 .logo {
   width: 60px;
   height: auto;
@@ -394,6 +371,7 @@ main {
   }
 }
 
+/* footer design */
 .footer {
   text-align: center;
   padding: 1rem;
