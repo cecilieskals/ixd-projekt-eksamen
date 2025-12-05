@@ -9,13 +9,13 @@
   </head>
   <body>
     <header>
-      <span id="logo">
+      <figure id="logo">
         <img
           src="img/logo.png"
           alt="Logo"
           class="logo"
         >
-      </span>
+      </figure>
 
       <!-- lokation -->
       <select id="lokation">
@@ -51,16 +51,18 @@
               <input type="text" id="search-input" placeholder="Søg..." />
           </div>
         </section>
-        <!-- Genre -->
-        <select id="genre-select">
-          <option value="all">Genre</option>
-        </select>
+       
         <!-- Sortéring -->
         <select id="sort-select">
           <option value="none">Sortéring: Ingen</option>
           <option value="title">Titel (A-Å)</option>
           <option value="year">År (Nyeste først)</option>
           <option value="rating">Popularitet</option>
+        </select>
+
+         <!-- Genre -->
+        <select id="genre-select">
+          <option value="all">Genre</option>
         </select>
       </section>
 

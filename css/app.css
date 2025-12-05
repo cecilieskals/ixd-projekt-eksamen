@@ -91,12 +91,16 @@ main {
 
 #filter-bar {
   display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
   justify-content: flex-end;
 }
 
 #search-bar {
   color: var(--text);
-  width: fit-content;
+  flex:1;
+  min-width: 200px;
   padding-left: 8px;
   padding-right: 8px;
   padding-bottom: 4px;
@@ -104,7 +108,6 @@ main {
   border-radius: var(--radius);
   background: var(--bg-card);
   box-shadow: var(--shadow);
-  margin-right: 8px;
 }
 
 #search-input {
@@ -119,7 +122,8 @@ main {
 
 #genre-select {
   color: var(--text);
-  width: fit-content;
+  flex: 1;
+  min-width: 150px;
   padding-left: 8px;
   padding-right: 8px;
   padding-bottom: 4px;
@@ -133,7 +137,8 @@ main {
 
 #sort-select {
   color: var(--text);
-  width: fit-content;
+  flex: 1;
+  min-width: 150px;
   padding-left: 8px;
   padding-right: 8px;
   padding-bottom: 4px;
@@ -346,6 +351,13 @@ main {
 .logo {
   width: 60px;
   height: auto;
+}
+
+@media (min-width: 600px) {
+  .logo {
+    width: 100px;
+    height: auto;
+  }
 }
 
 .footer {
