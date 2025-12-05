@@ -302,16 +302,6 @@ main {
   font-weight: bold;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: var(--bg-card);
-  color: var(--text-light);
-  margin-top: 2rem;
-  border-top: 1px solid var(--text);
-}
-
-
 .game-rules {
   color: var(--text) !important;
   font-size: 1rem !important;
@@ -330,4 +320,13 @@ footer {
 .logo {
   width: 80px;
   height: auto;
+}
+
+.foot {
+  text-align: center;
+  padding: 1rem;
+  background: var(--bg-card);
+  color: var(--text-light);
+  margin-top: 2rem;
+  border-top: 1px solid var(--text);
 }
