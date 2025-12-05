@@ -42,10 +42,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 16px;
-  margin-right: 16px;
+  margin: 0 16px;
   height: 12vh;
-  width: auto;
   top: 0px;
   position: sticky;
   background-color: var(--bg);
@@ -57,9 +55,6 @@ header {
 
 /* lokation design */
 #lokation {
-  display: flex;
-  align-items: center;
-  width: fit-content;
   background-color: var(--bg);
   color: var(--text);
   border: var(--bg);
@@ -94,35 +89,61 @@ main {
   gap: 1rem;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: flex-end;
-}
 
-#search-bar {
-  color: var(--text);
-  flex:1;
-  min-width: 200px;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-bottom: 4px;
-  padding-top: 4px;
-  border-radius: var(--radius);
-  background: var(--bg-card);
-  box-shadow: var(--shadow);
 }
 
 #search-input {
-  background: var(--bg-card);
+  background: var(--text);
   border: none;
-  color: var(--text);
+  color: var(--bg);
   font-size: 1rem;
   padding: 0.5rem;
   border-radius: var(--radius);
-  width: 200px;
+  width: 100%
 }
+
+#filter-icons {
+ display: flex;
+ justify-content: space-evenly;
+ }
+
+
+#filter-icons div:hover {
+  background: var(--dark-red);
+  color: var(--text-light);
+  transform: scale(1.05);
+}
+
+#filter-icons div {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 12vw;
+  height: 6vh;
+  margin: 12px 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#sort-section {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+#sort-selection-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 
 #genre-select {
   color: var(--text);
-  flex: 1;
+  flex: 2;
   min-width: 150px;
   padding-left: 8px;
   padding-right: 8px;
@@ -133,6 +154,7 @@ main {
   box-shadow: var(--shadow);
   margin-right: 8px;
   cursor: pointer;
+  position: relative;
 }
 
 #sort-select {
@@ -204,6 +226,7 @@ main {
 #game-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-items: center;
   gap: 1.5rem;
   padding-top: 1rem;
 }
@@ -227,7 +250,18 @@ main {
   #game-list {
     grid-template-columns: repeat(5, 1fr);
   }
+
+  #filter-bar {
+    justify-content: center;
+  }
+
+  #search-input {
+    width: 50vw;
+  }
 }
+
+/* dialog til filter */
+#filter-dialog 
 
 /* dialog til spil */
 #game-dialog {
@@ -269,8 +303,8 @@ main {
 }
 
 #close-dialog:hover {
-  background: darkred;
-  color: white;
+  background: var(--dark-red);
+  color: var(--text);
   transform: scale(1.1);
 }
 
@@ -368,3 +402,5 @@ main {
   margin-top: 2rem;
   border-top: 1px solid var(--text);
 }
+
+

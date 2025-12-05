@@ -21,6 +21,18 @@ function initApp() {
   const searchInput = document.querySelector("#search-input");
   if (searchInput) searchInput.addEventListener("input", filterGames);
 }
+// Modal dialog til filter
+const filterBtn = document.getElementById('filter-btn');
+const filterDialog = document.getElementById('filter-dialog');
+const closeFilterDialog = document.getElementById('close-filter-dialog');
+
+filterBtn.addEventListener('click', () => {
+  filterDialog.showModal();
+});
+
+closeFilterDialog.addEventListener('click', () => {
+  filterDialog.close();
+});
 
 // hent af data
 async function getGames() {
