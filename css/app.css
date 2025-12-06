@@ -17,7 +17,7 @@
 
   /* Effekter */
   --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3);
-  --radius: 00.5rem;
+  --radius: 0.5rem;
   --transition: 250ms ease;
 }
 
@@ -118,21 +118,19 @@ main {
 #filter-icons div:hover {
   background: var(--dark-red);
   color: var(--text-light);
-  transform: scale(1.05);
 }
 
 #filter-icons div {
   background: var(--bg-card);
   border-radius: var(--radius);
-  padding: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  width: 12vw;
-  height: 6vh;
   margin: 12px 0;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 64px;
+  height: 64px;
 }
 
 /* sortering design */
@@ -197,7 +195,6 @@ main {
 .atributterCard {
   display: flex;
   justify-content: space-between;
-  align-items: last baseline;
 }
 
 .game-cover {
@@ -211,9 +208,10 @@ main {
 #game-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  gap: 1.5rem;
+  width: 100%;
+  gap: 1.5rem 1.5rem;
   padding-top: 1rem;
+  
 }
 
 @media (min-width: 600px) {
@@ -268,6 +266,12 @@ main {
   overflow: hidden;
   position: relative;
   margin: auto;
+}
+
+@media (min-width: 600px) {
+  #game-dialog {
+    width: 500px;
+  }
 }
 
 #game-dialog::backdrop {
