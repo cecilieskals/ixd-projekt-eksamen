@@ -30,7 +30,7 @@ function setupFilterDialog() {
   const filterBtn = document.getElementById('filter-btn');
   const filterDialog = document.getElementById('filter-dialog');
   const closeFilterDialog = document.getElementById('close-filter-dialog');
-  const resetFilterBtn = document.getElementById('reset-filter-btn');
+  const rydFilterBtn = document.getElementById('ryd-filter-btn');
 
   if (filterBtn) {
     filterBtn.addEventListener('click', () => {
@@ -44,8 +44,8 @@ function setupFilterDialog() {
     });
   }
   
-  if (resetFilterBtn) {
-    resetFilterBtn.addEventListener('click', () => {
+  if (rydFilterBtn) {
+    rydFilterBtn.addEventListener('click', () => {
       document.getElementById('search-input').value = '';
       document.getElementById('genre-select').value = 'all';
       document.getElementById('sort-select').value = 'none';

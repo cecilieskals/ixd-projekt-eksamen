@@ -119,15 +119,36 @@
     <form method="dialog">
       <button id="close-filter-dialog" aria-label="Luk filter">✕</button>
       <div id="filter-dialog-content">
-        <h2>Filter</h2>
+        <h2>Filtre</h2>
         <!-- genre -->
         <select id="genre-select">
           <option value="all">Genre</option>
         </select>
+        <!-- antal spillere -->
+        <select id="players-select">
+          <option value="all">Antal spillere</option>
+          <option value="all">2-4 spillere</option>
+          <option value="all">4-8 spillere</option>
+          <option value="all">8+ spillere</option>
+        </select>
+        <!-- alder -->
+        <select id="age-select">
+          <option value="all">Alder</option>
+          <option value="all">Børn</option>
+          <option value="all">Voksne</option>
+        </select>
+        <!-- spilletid -->
+        <select id="playtime-select">
+          <option value="all">Spilletid</option>
+          <option value="all">15-30 min</option>
+          <option value="all">30-45 min</option>
+          <option value="all">45-60 min</option>
+          <option value="all">60+ min</option>
+        </select>
 
-        <!--anvend filter knap-->
-        <button type="submit">Anvend filtre</button>
-        <button id="reset-filter-btn" type="button">Ryd filtre</button>
+        <!--anvend og luk filter knapper-->
+        <button id="ryd-filter-btn" type="button">Ryd alt</button>
+        <button type="submit">Vis resultater</button>
       </div>
     </form>
   </dialog>

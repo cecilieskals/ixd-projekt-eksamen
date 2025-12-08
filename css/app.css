@@ -114,7 +114,6 @@ main {
  justify-content: space-evenly;
  }
 
-
 #filter-icons div:hover {
   background: var(--dark-red);
   color: var(--text-light);
@@ -150,22 +149,6 @@ main {
   border-radius: var(--radius);
   background: var(--bg-card);
   box-shadow: var(--shadow);
-  cursor: pointer;
-}
-
-/* genre i filterbar design */
-#genre-select {
-  color: var(--text);
-  flex: 2;
-  min-width: 150px;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-bottom: 4px;
-  padding-top: 4px;
-  border-radius: var(--radius);
-  background: var(--bg-card);
-  box-shadow: var(--shadow);
-  margin-right: 8px;
   cursor: pointer;
 }
 
@@ -252,6 +235,105 @@ main {
   background: var(--bg-card);
   color: var(--text);
   overflow: hidden;
+  margin-left: auto;
+  margin-right: 1rem;
+  margin-top: 4rem;
+}
+
+/* filtreringsknapper i filterbar */
+#genre-select {
+  color: var(--text);
+  min-width: 150px;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  box-shadow: var(--shadow);
+  margin-right: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#players-select {
+  color: var(--text);
+  min-width: 150px;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  box-shadow: var(--shadow);
+  margin-right: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#age-select {
+  color: var(--text);
+  min-width: 150px;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  box-shadow: var(--shadow);
+  margin-right: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#playtime-select {
+  color: var(--text);
+  min-width: 150px;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  box-shadow: var(--shadow);
+  margin-right: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* knapper i dialog filter */
+#ryd-filter-btn {
+  background: var(--bg-card);
+  outline: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  box-shadow: var(--shadow);
+}
+
+#filter-dialog-content button[type="submit"]{
+  background: var(--dark-red);
+  color: var(--text-light);
+  font-size: 1rem;
+  border: none;
+  outline: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+#close-filter-dialog {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--bg);
+  color: var(--text-light);
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+#close-filter-dialog:hover {
+  background: var(--dark-red);
+  color: var(--text);
 }
 
 /* dialog til spil */
@@ -283,7 +365,7 @@ main {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: var(--red);
+  background: var(--bg);
   color: var(--text-light);
   border: none;
   border-radius: 50%;
