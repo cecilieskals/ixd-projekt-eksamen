@@ -148,8 +148,8 @@ main {
   padding-top: 4px;
   border-radius: var(--radius);
   background: var(--bg-card);
-  box-shadow: var(--shadow);
   cursor: pointer;
+  height: 36px;
 }
 
 /* card design */
